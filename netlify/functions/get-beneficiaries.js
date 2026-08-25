@@ -107,8 +107,18 @@ exports.handler = async (event) => {
     { name: "12 Other Church Leaders", role: "Religious Leaders", gift: "Each received a 2026 Toyota Fortuner (US$78,000)" },
     { name: "3 Senior Church Leaders", role: "Religious Leaders", gift: "Each: 2026 Lexus LX500D (US$250k) plus US$50k fuel" },
     { name: "Evangelist Trymore Muparinga", role: "Street Preacher", gift: "2025 Toyota Fortuner plus US$50k cash" },
-
-    // ============================================================
+      // 10 South African Johanne Masowe Chishanu Members
+    { name: "Madzibaba Itai", role: "Religious Leader (Johanne Masowe Chishanu - City Deep, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Hermish", role: "Religious Leader (Johanne Masowe Chishanu - Kempton Park, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Ishmael", role: "Religious Leader (Johanne Masowe Chishanu - Venda, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Bynage", role: "Religious Leader (Johanne Masowe Chishanu - Free State, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzimai Loveness", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Aron", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzimai Memory", role: "Religious Leader (Johanne Masowe Chishanu - Germiston, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Thimothy", role: "Religious Leader (Johanne Masowe Chishanu - Eastern Cape, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Misheck", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Kennedy", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+        // ============================================================
     // TRADITIONAL & MEDIA
     // ============================================================
     { name: "Chief Hwenje", role: "Traditional Chief", gift: "Toyota Hilux (US$100,000)" },
