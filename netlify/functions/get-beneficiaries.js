@@ -165,7 +165,31 @@ exports.handler = async (event) => {
     { name: "Chibaya Headmaster's Wife", role: "Educator's Spouse", gift: "US$4,000 cash" },
     { name: "Mandy", role: "Therapist at Masawara Spa", gift: "Mercedes-Benz C200 plus US$10,000 cash for loyalty and service" },
     { name: "Cathy", role: "Bookings/Reception at Masawara Spa", gift: "Mercedes-Benz C200 plus US$10,000 cash for loyalty and service" },
+          // ============================================================
+    // NEWLY VERIFIED ADDITIONS (AUGUST 2026)
+    // ============================================================
 
+    // ---- SPORTS & FOOTBALL LEGENDS ----
+    { name: "Peter Ndlovu", role: "Football Legend (former Warriors captain)", gift: "2024 BMW X6M Sport Competition (US$144,000)" },
+    { name: "Luke Mnkandla", role: "Highlanders FC Chairman", gift: "Toyota Fortuner 2.8 GD6 (US$80,500) as part of club leadership gifts" },
+    { name: "Denzel Mnkandla", role: "Highlanders FC CEO", gift: "Toyota Fortuner 2.4 GD6 (US$72,500) as part of club leadership gifts" },
+    { name: "Jabulani Nkomo", role: "Highlanders FC Curator", gift: "Toyota Land Cruiser 300 Series VXR plus US$50,000 cash" },
+    { name: "Madinda Ndlovu", role: "Highlanders FC Legend", gift: "Toyota Fortuner 2.4 GD6 (US$72,500) as part of club leadership gifts" },
+
+    // ---- LEGAL PROFESSIONALS ----
+    { name: "Sikhumbuzo Mpofu", role: "Chivayo's Lawyer", gift: "2026 Range Rover Sport Autobiography plus US$50,000 cash" },
+    { name: "Adv. Edley Mubaiwa", role: "Chivayo's Lawyer", gift: "2026 Range Rover Sport Autobiography plus US$50,000 cash" },
+
+    // ---- POLITICS ----
+    { name: "Pupurai Togarepi", role: "ZANU PF Chief Whip", gift: "2026 Toyota Fortuner GD6 2.8 (US$82,000) plus US$100,000 cash" },
+
+    // ---- BUSINESS, ARTS & CULTURE ----
+    { name: "Dr. Nicholas Ndebele", role: "ZITF CEO", gift: "2025 Toyota Land Cruiser 300 VXR (US$200,000)" },
+    { name: "Aaron Chiundura Moyo", role: "Veteran Novelist / Filmmaker", gift: "2025 Toyota Fortuner 4x4 GD6 plus US$50,000 cash" },
+
+    // ---- MUSICIANS ----
+    { name: "Feli Nandi", role: "Musician / Restaurateur", gift: "2026 Toyota Fortuner 2.4 GD6 plus US$50,000 cash" },
+    { name: "Ex-Q", role: "Musician", gift: "2025 Mercedes-Benz GLE 450 (US$110,000) plus US$10,000 cash for fuel/maintenance" },
     // ============================================================
     // DECLINED GIFTS
     // ============================================================
