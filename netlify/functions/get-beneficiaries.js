@@ -103,7 +103,8 @@ exports.handler = async (event) => {
     { name: "Tatenda Magorokosho", role: "Boxer's Widow", gift: "Toyota Aqua plus US$10,000 cash" },
     { name: "School Headmaster", role: "Educator", gift: "Toyota Aqua plus US$5,000 cash" },
     { name: "Chibaya Headmaster's Wife", role: "Educator's Spouse", gift: "US$4,000 cash" },
-
+    // Politics
+    { name: "C.H. Mukungunugwa", role: "Political Activist / Social Media Influencer", gift: "2020 Mercedes-Benz C220, US$20,000 cash, iPhone 16 Pro Max, Samsung Galaxy S24 Ultra, iPad Air, and later a Toyota Fortuner" },
     // Declined
     { name: "Nqobile Magwizi", role: "ZIFA President (declined)", gift: "Declined: 2026 Range Rover Sport (US$250k) plus Land Cruiser" },
     { name: "Eunor Guti", role: "ZAOGA Leader (declined)", gift: "Declined: US$2M plus Toyota Land Cruiser 300 VXR" },
