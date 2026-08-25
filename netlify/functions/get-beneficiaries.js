@@ -35,8 +35,9 @@ exports.handler = async (event) => {
     { name: "Andy Muridzo", role: "Musician", gift: "Mercedes Benz" },
     { name: "Diana Samkange", role: "Musician", gift: "Mercedes Benz" },
     { name: "Peter Moyo", role: "Musician (son of Tongai Moyo)", gift: "Mercedes Benz C Class" },
-    // Musicians
-{ name: "Shinsoman", role: "Zimdancehall Musician", gift: "Mercedes-Benz C-Class (US$25,000) plus US$10,000 cash for fuel and personal use" },
+    { name: "Shinsoman", role: "Zimdancehall Musician", gift: "Mercedes-Benz C-Class (US$25,000) plus US$10,000 cash for fuel and personal use" },
+{ name: "Mambo Dhuterere", role: "Gospel Musician", gift: "White Toyota Fortuner 2.8 GD6 plus US$50,000 cash" },
+{ name: "Mai Dhuterere", role: "Gospel Musician", gift: "White Toyota Fortuner 2.8 GD6 plus US$100,000 cash" },
 
     // ============================================================
     // COMEDIANS & CONTENT CREATORS
@@ -66,6 +67,12 @@ exports.handler = async (event) => {
     { name: "Prophet Uebert Angel", role: "Religious Leader", gift: "Over US$1M: Bentley Flying Spectre, Rolls Royce Cullinan, etc." },
     { name: "Beverly Angel", role: "Uebert Angel's Wife", gift: "Lexus GX550" },
     { name: "Seer Angel", role: "Uebert Angel's Son", gift: "Bentley GT Continental" },
+    // Religious Leaders
+// ... existing entries ...
+
+// Uebert Angel's Sons / Pastors
+    { name: "Pastor Felix", role: "Religious Leader (Spirit Embassy / Uebert Angel's spiritual son)", gift: "2026 Toyota Land Cruiser 300 Series ZX plus US$10,000 cash for fuel" },
+    { name: "Pastor Elijah", role: "Religious Leader (Mount Gilead / Uebert Angel's spiritual son)", gift: "2026 Toyota Land Cruiser 300 Series ZX plus US$10,000 cash for fuel" },
 
     // Madzibabas (Apostolic)
     { name: "Madzibaba Lawrence Lavious Katsiru", role: "Religious Leader (Johanne Masowe Chishanu - Marondera)", gift: "2025 Mercedes Benz GLS450 4matic plus Lexus LX450d, and recently a 2026 Lexus LX500D (US$250,000) plus US$50,000 for fuel and upkeep" },
