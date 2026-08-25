@@ -198,7 +198,7 @@ exports.handler = async (event) => {
     // ============================================================
     // DECLINED GIFTS
     // ============================================================
-    { name: "Nqobile Magwizi", role: "ZIFA President (declined)", gift: "Declined: 2026 Range Rover Sport (US$250k) plus Land Cruiser" },
+    { name: "Nqobile Magwizi", role: "ZIFA President (disputed)", gift: "Allegation: Received vehicles totalling R7.2 million (approx. US$400,000) across two occasions in 2025 and 2026 (per Wikipedia / Chivayo claims). Denial: Magwizi publicly states he declined both offers citing FIFA ethics rules." },
     { name: "Eunor Guti", role: "ZAOGA Leader (declined)", gift: "Declined: US$2M plus Toyota Land Cruiser 300 VXR" },
 
     // ============================================================
