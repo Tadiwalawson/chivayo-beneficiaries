@@ -151,6 +151,8 @@ exports.handler = async (event) => {
     { name: "Tatenda Magorokosho", role: "Boxer's Widow", gift: "Toyota Aqua plus US$10,000 cash" },
     { name: "School Headmaster", role: "Educator", gift: "Toyota Aqua plus US$5,000 cash" },
     { name: "Chibaya Headmaster's Wife", role: "Educator's Spouse", gift: "US$4,000 cash" },
+    { name: "Mandy", role: "Therapist at Masawara Spa", gift: "Mercedes-Benz C200 plus US$10,000 cash for loyalty and service" },
+    { name: "Cathy", role: "Bookings/Reception at Masawara Spa", gift: "Mercedes-Benz C200 plus US$10,000 cash for loyalty and service" },
 
     // ============================================================
     // DECLINED GIFTS
