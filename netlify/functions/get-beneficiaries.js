@@ -190,6 +190,11 @@ exports.handler = async (event) => {
     // ---- MUSICIANS ----
     { name: "Feli Nandi", role: "Musician / Restaurateur", gift: "2026 Toyota Fortuner 2.4 GD6 plus US$50,000 cash" },
     { name: "Ex-Q", role: "Musician", gift: "2025 Mercedes-Benz GLE 450 (US$110,000) plus US$10,000 cash for fuel/maintenance" },
+          // ---- COMEDIANS ----
+    { name: "Comic Elder", role: "Comedian", gift: "US$150,000 cash for a house (for making the President laugh)" },
+
+    // ---- FAMILY MEMBERS (Jah Prayzah's Wife) ----
+    { name: "Rufaro Chiworeso Mukombe", role: "Jah Prayzah's Wife", gift: "2024/2025 Land Rover Defender 2.4 D / 3.0 D (valued at over US$120,000) as a birthday gift" },
     // ============================================================
     // DECLINED GIFTS
     // ============================================================
