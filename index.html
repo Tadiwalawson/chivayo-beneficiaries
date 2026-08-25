@@ -346,7 +346,7 @@
         .about-box .stats .num {
             font-size: 2rem;
             font-weight: 700;
-            color: #3b82f6;
+            color: #dc2626; /* RED color for statistics */
         }
         .about-box .stats .label {
             font-size: 0.85rem;
@@ -433,7 +433,7 @@
                 <p class="subhead">Search by name, role, or gift to find specific recipients</p>
 
                 <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Example: Jah Prayzah, Macheso, Fortuner" />
+                    <input type="text" id="searchInput" placeholder="Example: Jah Prayzah, Macheso, Fortuner" autofocus />
                     <button id="searchBtn">Search</button>
                 </div>
                 <div class="result-count" id="resultCount"></div>
@@ -463,11 +463,11 @@
                         <div class="label">People &amp; Organisations</div>
                     </div>
                     <div>
-                        <div class="num">250+</div>
+                        <div class="num" id="totalVehicles">300+</div>
                         <div class="label">Vehicles Given</div>
                     </div>
                     <div>
-                        <div class="num">$43M+</div>
+                        <div class="num" id="totalValue">$33M+</div>
                         <div class="label">Reported Value</div>
                     </div>
                 </div>
@@ -486,10 +486,8 @@
     <!-- ========== JAVASCRIPT ========== -->
     <script>
         // ============================================================
-        //  FRONTEND LOGIC (No data stored here!)
-        //  All data is fetched from the Netlify Function API.
+        //  DOM REFS
         // ============================================================
-
         const searchInput = document.getElementById('searchInput');
         const searchBtn = document.getElementById('searchBtn');
         const resultsGrid = document.getElementById('resultsGrid');
@@ -501,10 +499,13 @@
         const totalPeopleSpan = document.getElementById('totalPeople');
 
         // ============================================================
-        //  API FETCHING
+        //  DYNAMIC SEARCH - FETCH DATA FROM API
         // ============================================================
+        let searchTimeout = null;
+
         async function fetchBeneficiaries(query) {
             const trimmed = query.trim();
+
             // If search is empty, show the empty state
             if (!trimmed) {
                 showEmptyState();
@@ -520,9 +521,6 @@
                 const response = await fetch(`/.netlify/functions/get-beneficiaries?q=${encodeURIComponent(trimmed)}`);
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
-
-                // Update total count on About page (if we want to show it)
-                totalPeopleSpan.textContent = data.total;
 
                 // Update result count
                 resultCount.innerHTML = `Showing <strong>${data.matched}</strong> result${data.matched !== 1 ? 's' : ''}`;
@@ -556,8 +554,8 @@
 
             let html = '';
             results.forEach(item => {
-                const isDeclined = item.gift.toLowerCase().includes('declined');
-                const badge = isDeclined ? `<span class="declined-badge">declined</span>` : '';
+                const isDeclined = item.gift.toLowerCase().includes('declined') || item.gift.toLowerCase().includes('disputed');
+                const badge = isDeclined ? `<span class="declined-badge">${item.gift.toLowerCase().includes('disputed') ? 'disputed' : 'declined'}</span>` : '';
                 html += `
                     <div class="card">
                         <div class="name">${item.name} ${badge}</div>
@@ -583,15 +581,40 @@
         }
 
         // ============================================================
-        //  SEARCH HANDLERS
+        //  SEARCH HANDLERS (Dynamic - Updates on every keystroke)
         // ============================================================
         function handleSearch() {
-            fetchBeneficiaries(searchInput.value);
+            // Clear any pending timeout
+            if (searchTimeout) {
+                clearTimeout(searchTimeout);
+            }
+
+            // Debounce: wait 200ms after typing stops before searching
+            searchTimeout = setTimeout(() => {
+                fetchBeneficiaries(searchInput.value);
+            }, 200);
         }
 
-        searchBtn.addEventListener('click', handleSearch);
+        // Trigger search on every keystroke (input event)
+        searchInput.addEventListener('input', handleSearch);
+
+        // Also trigger on Enter key press (for immediate feedback)
         searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') handleSearch();
+            if (e.key === 'Enter') {
+                // Clear timeout and search immediately
+                if (searchTimeout) {
+                    clearTimeout(searchTimeout);
+                }
+                fetchBeneficiaries(searchInput.value);
+            }
+        });
+
+        // Search button also triggers immediate search
+        searchBtn.addEventListener('click', () => {
+            if (searchTimeout) {
+                clearTimeout(searchTimeout);
+            }
+            fetchBeneficiaries(searchInput.value);
         });
 
         // ============================================================
@@ -608,17 +631,30 @@
                 aboutPage.classList.add('active');
                 homeBtn.classList.remove('active');
                 aboutBtn.classList.add('active');
-                // If we have the total from the API, show it; otherwise fallback
-                // We'll try to fetch total on About load if not available.
-                if (!totalPeopleSpan.textContent || totalPeopleSpan.textContent === '0') {
-                    // Fetch without query just to get the total
-                    fetch('/.netlify/functions/get-beneficiaries?q=')
-                        .then(res => res.json())
-                        .then(data => {
-                            totalPeopleSpan.textContent = data.total;
-                        })
-                        .catch(() => {});
-                }
+                updateAboutStats();
+            }
+        }
+
+        async function updateAboutStats() {
+            try {
+                const response = await fetch(`/.netlify/functions/get-beneficiaries?q=`);
+                const data = await response.json();
+
+                // Total entries in the array (124)
+                const totalEntries = data.total;
+
+                // Add expanded group members (96)
+                const totalWithGroups = totalEntries + 96;
+
+                document.getElementById('totalPeople').textContent = totalWithGroups + '+';
+
+                // Update vehicles and value (hardcoded estimates)
+                document.getElementById('totalVehicles').textContent = '300+';
+                document.getElementById('totalValue').textContent = '$33M+';
+
+            } catch (error) {
+                console.error('Error fetching stats:', error);
+                document.getElementById('totalPeople').textContent = '220+';
             }
         }
 
@@ -629,13 +665,12 @@
         //  INIT
         // ============================================================
         showEmptyState();
-        // Pre-fetch total for About page (on load)
-        fetch('/.netlify/functions/get-beneficiaries?q=')
-            .then(res => res.json())
-            .then(data => {
-                totalPeopleSpan.textContent = data.total;
-            })
-            .catch(() => {});
+        // Pre-fetch total for About page on load
+        updateAboutStats();
+
+        // If the user has JavaScript disabled or slow, show a fallback
+        // Also focus the search input
+        searchInput.focus();
     </script>
 
 </body>
