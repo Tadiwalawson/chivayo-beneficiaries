@@ -119,7 +119,7 @@ exports.handler = async (event) => {
     { name: "Madzibaba Misheck", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
     { name: "Madzibaba Kennedy", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },  
     { name: "Madzibaba Remincco Tafadzwa Zhangazha", role: "Religious Leader / Friend (Johanne Masowe Chishanu)", gift: "2026 Lamborghini Urus SE plus US$100,000 cash as a birthday gift" },  
-    
+    { name: "Madzibaba Ngoni", role: "Religious Leader (Johanne Masowe Chishanu - Evaton Branch, South Africa)", gift: "2026 Toyota Land Cruiser 300 Series ZX" },
     // ============================================================
     // TRADITIONAL & MEDIA
     // ============================================================
