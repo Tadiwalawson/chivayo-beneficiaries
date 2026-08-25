@@ -1,7 +1,6 @@
 // netlify/functions/get-beneficiaries.js
 
 exports.handler = async (event) => {
-  // The entire data is stored HERE, safely on the server
   const recipients = [
     // Family & Friends
     { name: "Lucy Chivayo", role: "Wife", gift: "2025 Mercedes Benz G Wagon, Range Rover, 2025 Toyota Landcruiser 300 ZX" },
@@ -43,9 +42,9 @@ exports.handler = async (event) => {
     { name: "Wilson 'MaVery' Masakadze", role: "Comedian", gift: "Toyota Aqua" },
     { name: "Mr. Ridhikurasi", role: "Content Creator", gift: "Toyota Aqua plus US$5,000 cash" },
 
-    // Religious Leaders
-    { name: "Prophet Emmanuel Makandiwa", role: "Religious Leader (UFIC)", gift: "Initially declined, then accepted: US$1M plus 2026 Rolls Royce Cullinan Facelift" },
-    { name: "Ruth Makandiwa", role: "Emmanuel Makandiwa's Wife", gift: "New Mercedes Benz G Wagon (color of her choice)" },
+    // Religious Leaders (FIXED Makandiwa entries)
+    { name: "Prophet Emmanuel Makandiwa", role: "Religious Leader (UFIC)", gift: "Accepted: US$1 million cash for church development, plus a 2026 Rolls-Royce Cullinan Facelift" },
+    { name: "Ruth Makandiwa", role: "Emmanuel Makandiwa's Wife", gift: "Accepted: a new Mercedes-Benz G-Wagon (color of her choice)" },
     { name: "Prophet Ian Ndlovu", role: "Religious Leader", gift: "2025 Toyota Land Cruiser 300 Series VXR" },
     { name: "Mrs. Ndlovu", role: "Ian Ndlovu's Wife", gift: "2025 Toyota Fortuner 2.8D GD6" },
     { name: "Bishop Nehemiah Mutendi", role: "Religious Leader (ZCC)", gift: "Over US$4M total: US$2M cash plus 2025 Mercedes Maybach S680 (US$450k)" },
@@ -118,7 +117,6 @@ exports.handler = async (event) => {
     { name: "Provincial Hospitals", role: "Healthcare", gift: "10 Toyota Land Cruiser ICU ambulances (US$90k each)" }
   ];
 
-  // Get the search query from the URL parameters
   const query = event.queryStringParameters.q || '';
   let filtered = recipients;
 
