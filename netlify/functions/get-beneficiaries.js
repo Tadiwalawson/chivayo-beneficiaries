@@ -35,6 +35,8 @@ exports.handler = async (event) => {
     { name: "Andy Muridzo", role: "Musician", gift: "Mercedes Benz" },
     { name: "Diana Samkange", role: "Musician", gift: "Mercedes Benz" },
     { name: "Peter Moyo", role: "Musician (son of Tongai Moyo)", gift: "Mercedes Benz C Class" },
+    // Musicians
+{ name: "Shinsoman", role: "Zimdancehall Musician", gift: "Mercedes-Benz C-Class (US$25,000) plus US$10,000 cash for fuel and personal use" },
 
     // ============================================================
     // COMEDIANS & CONTENT CREATORS
