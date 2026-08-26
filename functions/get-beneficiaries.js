@@ -120,6 +120,7 @@ export async function onRequest(context) {
     { name: "12 Other Church Leaders", role: "Religious Leaders", gift: "Each received a 2026 Toyota Fortuner (US$78,000)" },
     { name: "3 Senior Church Leaders", role: "Religious Leaders", gift: "Each: 2026 Lexus LX500D (US$250k) plus US$50k fuel" },
     { name: "Evangelist Trymore Muparinga", role: "Street Preacher", gift: "2025 Toyota Fortuner plus US$50k cash" },
+    { name: "Madzibaba Flotcher Dispenser", role: "Religious Leader (Johanne Masowe Echishanu - Mhondoro)", gift: "Toyota Fortuner GD-6 (October 2025)" },
 
     // ============================================================
     // TRADITIONAL & MEDIA
