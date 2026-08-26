@@ -299,6 +299,7 @@
                 const expandedTotal = calculateExpandedTotal(fullData);
                 resultCount.innerHTML = `Showing <strong>${expandedTotal}</strong> individual beneficiaries (sorted A-Z)`;
 
+                console.log('🖥️ Calling renderData with', fullData.length, 'items');
                 renderData(fullData);
 
             } catch (error) {
@@ -340,9 +341,10 @@
         }
 
         // ============================================================
-        //  RENDER FUNCTIONS
+        //  RENDER FUNCTIONS WITH DEBUG LOGGING
         // ============================================================
         function renderData(data) {
+            console.log('🖥️ renderData called with', data.length, 'items, currentView:', currentView);
             if (currentView === 'card') {
                 renderCards(data);
             } else {
@@ -351,6 +353,7 @@
         }
 
         function renderCards(results) {
+            console.log('🃏 renderCards called with', results.length, 'items');
             if (results.length === 0) {
                 resultsGrid.innerHTML = `
                     <div class="no-results">
@@ -372,10 +375,13 @@
                     </div>
                 `;
             });
+            console.log('🃏 renderCards generated HTML length:', html.length);
             resultsGrid.innerHTML = html;
+            console.log('✅ renderCards complete, resultsGrid updated');
         }
 
         function renderTable(results) {
+            console.log('📋 renderTable called with', results.length, 'items');
             if (results.length === 0) {
                 resultsGrid.innerHTML = `
                     <div class="no-results">
@@ -418,7 +424,9 @@
                 </div>
             `;
 
+            console.log('📋 renderTable generated HTML length:', html.length);
             resultsGrid.innerHTML = html;
+            console.log('✅ renderTable complete, resultsGrid updated');
         }
 
         // ============================================================
@@ -588,6 +596,7 @@
         // ============================================================
         //  INIT
         // ============================================================
+        console.log('🚀 Site initialized, loading data...');
         loadFullList();
         updateAboutStats();
         searchInput.focus();
