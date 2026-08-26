@@ -5,7 +5,7 @@ exports.handler = async (event) => {
     // ============================================================
     // FAMILY & FRIENDS
     // ============================================================
-    { name: "Lucy Chivayo", role: "Wife", gift: "2025 Mercedes Benz G Wagon, Range Rover, 2025 Toyota Landcruiser 300 ZX" },
+    { name: "Lucy Chivayo", role: "Wife", gift: "2025 Mercedes Benz G Wagon, Range Rover, 2025 Toyota Landcruiser 300 ZX, and a 2026 Bentley Bentayga Atelier Edition (US$750,000) plus US$1 million birthday pledge" },
     { name: "Wicknell Chivayo's Sister", role: "Family Member", gift: "2025 Porsche (approximately US$128,000)" },
     { name: "Tazvi Mhaka", role: "Friend", gift: "US$250,000 cash, Toyota Landcruiser VXR 300, 2023 Bentley Beytaga V8 Sport" },
     { name: "Nakamba", role: "Personal Barber", gift: "Mercedes Benz C Class (reward for 1 year 5 months service)" },
@@ -39,7 +39,13 @@ exports.handler = async (event) => {
     { name: "Mambo Dhuterere", role: "Gospel Musician", gift: "White Toyota Fortuner 2.8 GD6 plus US$50,000 cash" },
     { name: "Mai Dhuterere", role: "Gospel Musician", gift: "White Toyota Fortuner 2.8 GD6 plus US$100,000 cash" },
     { name: "Jah Master", role: "Zimdancehall Musician", gift: "Mercedes-Benz C200 (April 2024) for his hit song 'Hello Mwari' and performing at ZANU PF rallies" },
+    { name: "DJ Towers", role: "DJ / Entertainer", gift: "2025 Toyota Fortuner 4x4 2.8 GD6 plus US$50,000 cash for ZANU PF loyalty" },
+    { name: "Ras Caleb", role: "Reggae Artist", gift: "Toyota Aqua plus US$2,000 cash for releasing a song praising the ZiG currency" },
+      // Musicians
+// ... existing entries ...
 
+{ name: "Freeman HKD", role: "Zimdancehall Musician", gift: "Mercedes-Benz GLE 400d plus US$10,000 cash for fuel (July 2026) for his consistency and hit song 'Patichaita Mari' which inspired Chivayo" },
+    
     // ============================================================
     // COMEDIANS & CONTENT CREATORS
     // ============================================================
@@ -58,7 +64,7 @@ exports.handler = async (event) => {
     // UFIC / Makandiwa
     { name: "Prophet Emmanuel Makandiwa", role: "Religious Leader (UFIC)", gift: "Accepted: US$1 million cash for church development, plus a 2026 Rolls-Royce Cullinan Facelift" },
     { name: "Ruth Makandiwa", role: "Emmanuel Makandiwa's Wife", gift: "Accepted: a new Mercedes-Benz G-Wagon (color of her choice)" },
-
+    
     // Prophets
     { name: "Prophet Ian Ndlovu", role: "Religious Leader", gift: "2025 Toyota Land Cruiser 300 Series VXR" },
     { name: "Mrs. Ndlovu", role: "Ian Ndlovu's Wife", gift: "2025 Toyota Fortuner 2.8D GD6" },
@@ -74,7 +80,7 @@ exports.handler = async (event) => {
 // Uebert Angel's Sons / Pastors
     { name: "Pastor Felix", role: "Religious Leader (Spirit Embassy / Uebert Angel's spiritual son)", gift: "2026 Toyota Land Cruiser 300 Series ZX plus US$10,000 cash for fuel" },
     { name: "Pastor Elijah", role: "Religious Leader (Mount Gilead / Uebert Angel's spiritual son)", gift: "2026 Toyota Land Cruiser 300 Series ZX plus US$10,000 cash for fuel" },
-
+    { name: "Prophetess Tracey Pilime", role: "Religious Leader (Hope of Glory International Ministries)", gift: "Offered: 2026 Toyota Lexus GX 550 (US$220,000) plus US$100,000 cash" },
     // Madzibabas (Apostolic)
     { name: "Madzibaba Lawrence Lavious Katsiru", role: "Religious Leader (Johanne Masowe Chishanu - Marondera)", gift: "2025 Mercedes Benz GLS450 4matic plus Lexus LX450d, and recently a 2026 Lexus LX500D (US$250,000) plus US$50,000 for fuel and upkeep" },
     { name: "Madzibaba Israel Muhana", role: "Religious Leader (Johanne Masowe Chishanu - Coca-Cola Branch)", gift: "Lexus 450d plus 2025 Mercedes Benz GLE 301d 4matic, and recently a 2026 Lexus LX500D (US$250,000) plus US$50,000 for fuel and upkeep" },
