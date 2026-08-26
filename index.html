@@ -246,7 +246,6 @@
         // ============================================================
         function calculateExpandedTotal(data) {
             let total = data.length;
-
             data.forEach(item => {
                 if (item.name === "10 ZANU PF Provincial Chairpersons") {
                     total += 9;
@@ -262,12 +261,11 @@
                     total += 11;
                 }
             });
-
             return total;
         }
 
         // ============================================================
-        //  API FETCHING
+        //  API FETCHING WITH DEBUG LOGGING
         // ============================================================
         async function loadFullList() {
             if (isLoading) return;
@@ -275,15 +273,28 @@
             resultsGrid.innerHTML = `<div class="loading-wrapper"><div class="loader"></div></div>`;
 
             try {
+                console.log('🔍 Fetching data from API...');
                 const response = await fetch(`/.netlify/functions/get-beneficiaries?q=`);
+                console.log('📡 Response status:', response.status);
+                
                 if (!response.ok) throw new Error('Network response was not ok');
                 const data = await response.json();
+                console.log('✅ Data received:', data);
+                console.log('📊 Total entries:', data.total);
+                console.log('📊 Matched:', data.matched);
+
+                if (!data.results || data.results.length === 0) {
+                    console.warn('⚠️ No results found in API response');
+                    resultsGrid.innerHTML = `<div class="no-results">No data found. Please try again later.</div>`;
+                    return;
+                }
 
                 fullData = data.results.sort((a, b) => {
                     return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
                 });
 
                 filteredData = fullData;
+                console.log('✅ Full data loaded:', fullData.length, 'entries');
 
                 const expandedTotal = calculateExpandedTotal(fullData);
                 resultCount.innerHTML = `Showing <strong>${expandedTotal}</strong> individual beneficiaries (sorted A-Z)`;
@@ -291,10 +302,11 @@
                 renderData(fullData);
 
             } catch (error) {
-                console.error('Error loading data:', error);
+                console.error('❌ Error loading data:', error);
                 resultsGrid.innerHTML = `
                     <div class="no-results" style="border-color: #fca5a5;">
-                        Error loading data. Please refresh the page.
+                        Error loading data. Please refresh the page.<br>
+                        <small>${error.message}</small>
                     </div>
                 `;
                 resultCount.innerHTML = 'Error loading data';
@@ -303,6 +315,9 @@
             }
         }
 
+        // ============================================================
+        //  FILTER DATA (Search)
+        // ============================================================
         function filterData(query) {
             const trimmed = query.trim();
 
