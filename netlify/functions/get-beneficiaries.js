@@ -41,10 +41,8 @@ exports.handler = async (event) => {
     { name: "Jah Master", role: "Zimdancehall Musician", gift: "Mercedes-Benz C200 (April 2024) for his hit song 'Hello Mwari' and performing at ZANU PF rallies" },
     { name: "DJ Towers", role: "DJ / Entertainer", gift: "2025 Toyota Fortuner 4x4 2.8 GD6 plus US$50,000 cash for ZANU PF loyalty" },
     { name: "Ras Caleb", role: "Reggae Artist", gift: "Toyota Aqua plus US$2,000 cash for releasing a song praising the ZiG currency" },
-      // Musicians
-// ... existing entries ...
-
-{ name: "Freeman HKD", role: "Zimdancehall Musician", gift: "Mercedes-Benz GLE 400d plus US$10,000 cash for fuel (July 2026) for his consistency and hit song 'Patichaita Mari' which inspired Chivayo" },
+    { name: "Kikky Badass", role: "Rapper / Musician", gift: "Mercedes Benz C250 (June 2024) for public support of ZANU PF" },
+    { name: "Freeman HKD", role: "Zimdancehall Musician", gift: "Mercedes-Benz GLE 400d plus US$10,000 cash for fuel (July 2026) for his consistency and hit song 'Patichaita Mari' which inspired Chivayo" },
     
     // ============================================================
     // COMEDIANS & CONTENT CREATORS
