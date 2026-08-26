@@ -265,7 +265,7 @@
         }
 
         // ============================================================
-        //  API FETCHING WITH DEBUG LOGGING
+        //  API FETCHING (UPDATED FOR CLOUDFLARE PAGES)
         // ============================================================
         async function loadFullList() {
             if (isLoading) return;
@@ -273,8 +273,9 @@
             resultsGrid.innerHTML = `<div class="loading-wrapper"><div class="loader"></div></div>`;
 
             try {
-                console.log('🔍 Fetching data from API...');
-                const response = await fetch(`/get-beneficiaries?q=`);
+                console.log('🔍 Fetching data from Cloudflare Pages API...');
+                // FIX: Use /api/get-beneficiaries instead of /get-beneficiaries
+                const response = await fetch(`/api/get-beneficiaries?q=`);
                 console.log('📡 Response status:', response.status);
                 
                 if (!response.ok) throw new Error('Network response was not ok');
@@ -341,7 +342,7 @@
         }
 
         // ============================================================
-        //  RENDER FUNCTIONS WITH DEBUG LOGGING
+        //  RENDER FUNCTIONS
         // ============================================================
         function renderData(data) {
             console.log('🖥️ renderData called with', data.length, 'items, currentView:', currentView);
@@ -555,7 +556,8 @@
 
         async function updateAboutStats() {
             try {
-                const response = await fetch(`/get-beneficiaries?q=`);
+                // FIX: Use /api/get-beneficiaries instead of /get-beneficiaries
+                const response = await fetch(`/api/get-beneficiaries?q=`);
                 const data = await response.json();
                 const totalEntries = data.total;
                 const totalWithGroups = totalEntries + 96;
