@@ -41,9 +41,11 @@ exports.handler = async (event) => {
     { name: "Jah Master", role: "Zimdancehall Musician", gift: "Mercedes-Benz C200 (April 2024) for his hit song 'Hello Mwari' and performing at ZANU PF rallies" },
     { name: "DJ Towers", role: "DJ / Entertainer", gift: "2025 Toyota Fortuner 4x4 2.8 GD6 plus US$50,000 cash for ZANU PF loyalty" },
     { name: "Ras Caleb", role: "Reggae Artist", gift: "Toyota Aqua plus US$2,000 cash for releasing a song praising the ZiG currency" },
-    { name: "Kikky Badass", role: "Rapper / Musician", gift: "Mercedes Benz C250 (June 2024) for public support of ZANU PF" },
     { name: "Freeman HKD", role: "Zimdancehall Musician", gift: "Mercedes-Benz GLE 400d plus US$10,000 cash for fuel (July 2026) for his consistency and hit song 'Patichaita Mari' which inspired Chivayo" },
-    
+    { name: "Kikky Badass", role: "Rapper / Musician", gift: "Mercedes Benz C250 (June 2024) for public support of ZANU PF" },
+    { name: "Feli Nandi", role: "Musician / Restaurateur", gift: "2026 Toyota Fortuner 2.4 GD6 plus US$50,000 cash" },
+    { name: "Ex-Q", role: "Musician", gift: "2025 Mercedes-Benz GLE 450 (US$110,000) plus US$10,000 cash for fuel/maintenance" },
+
     // ============================================================
     // COMEDIANS & CONTENT CREATORS
     // ============================================================
@@ -55,6 +57,7 @@ exports.handler = async (event) => {
     { name: "Rolland 'Boss Kedha' Lunga", role: "Comedian", gift: "Toyota Aqua" },
     { name: "Wilson 'MaVery' Masakadze", role: "Comedian", gift: "Toyota Aqua" },
     { name: "Mr. Ridhikurasi", role: "Content Creator", gift: "Toyota Aqua plus US$5,000 cash" },
+    { name: "Comic Elder", role: "Comedian", gift: "US$150,000 cash for a house (for making the President laugh)" },
 
     // ============================================================
     // RELIGIOUS LEADERS
@@ -62,7 +65,7 @@ exports.handler = async (event) => {
     // UFIC / Makandiwa
     { name: "Prophet Emmanuel Makandiwa", role: "Religious Leader (UFIC)", gift: "Accepted: US$1 million cash for church development, plus a 2026 Rolls-Royce Cullinan Facelift" },
     { name: "Ruth Makandiwa", role: "Emmanuel Makandiwa's Wife", gift: "Accepted: a new Mercedes-Benz G-Wagon (color of her choice)" },
-    
+
     // Prophets
     { name: "Prophet Ian Ndlovu", role: "Religious Leader", gift: "2025 Toyota Land Cruiser 300 Series VXR" },
     { name: "Mrs. Ndlovu", role: "Ian Ndlovu's Wife", gift: "2025 Toyota Fortuner 2.8D GD6" },
@@ -72,13 +75,12 @@ exports.handler = async (event) => {
     { name: "Prophet Uebert Angel", role: "Religious Leader", gift: "Over US$1M: Bentley Flying Spectre, Rolls Royce Cullinan, etc." },
     { name: "Beverly Angel", role: "Uebert Angel's Wife", gift: "Lexus GX550" },
     { name: "Seer Angel", role: "Uebert Angel's Son", gift: "Bentley GT Continental" },
-    // Religious Leaders
-// ... existing entries ...
 
-// Uebert Angel's Sons / Pastors
+    // Uebert Angel's Sons / Pastors
     { name: "Pastor Felix", role: "Religious Leader (Spirit Embassy / Uebert Angel's spiritual son)", gift: "2026 Toyota Land Cruiser 300 Series ZX plus US$10,000 cash for fuel" },
     { name: "Pastor Elijah", role: "Religious Leader (Mount Gilead / Uebert Angel's spiritual son)", gift: "2026 Toyota Land Cruiser 300 Series ZX plus US$10,000 cash for fuel" },
     { name: "Prophetess Tracey Pilime", role: "Religious Leader (Hope of Glory International Ministries)", gift: "Offered: 2026 Toyota Lexus GX 550 (US$220,000) plus US$100,000 cash" },
+
     // Madzibabas (Apostolic)
     { name: "Madzibaba Lawrence Lavious Katsiru", role: "Religious Leader (Johanne Masowe Chishanu - Marondera)", gift: "2025 Mercedes Benz GLS450 4matic plus Lexus LX450d, and recently a 2026 Lexus LX500D (US$250,000) plus US$50,000 for fuel and upkeep" },
     { name: "Madzibaba Israel Muhana", role: "Religious Leader (Johanne Masowe Chishanu - Coca-Cola Branch)", gift: "Lexus 450d plus 2025 Mercedes Benz GLE 301d 4matic, and recently a 2026 Lexus LX500D (US$250,000) plus US$50,000 for fuel and upkeep" },
@@ -98,6 +100,18 @@ exports.handler = async (event) => {
     { name: "Madzibaba Fungai Nyadzunda", role: "Religious Leader (Johanne Masowe Chishanu - Gwanzura/Mudare)", gift: "2026 Toyota Fortuner (US$78,000) plus US$10,000 for fuel" },
     { name: "Madzibaba Steve Rutsito", role: "Religious Leader (Johanne Masowe Chishanu - Velvet/Musondosi)", gift: "2026 Toyota Fortuner (US$78,000) plus US$10,000 for fuel" },
 
+    // 10 South African Johanne Masowe Chishanu Members
+    { name: "Madzibaba Itai", role: "Religious Leader (Johanne Masowe Chishanu - City Deep, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Hermish", role: "Religious Leader (Johanne Masowe Chishanu - Kempton Park, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Ishmael", role: "Religious Leader (Johanne Masowe Chishanu - Venda, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Bynage", role: "Religious Leader (Johanne Masowe Chishanu - Free State, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzimai Loveness", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Aron", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzimai Memory", role: "Religious Leader (Johanne Masowe Chishanu - Germiston, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Thimothy", role: "Religious Leader (Johanne Masowe Chishanu - Eastern Cape, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Misheck", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+    { name: "Madzibaba Kennedy", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
+
     // Other Church Leaders
     { name: "Madzibaba Sapatina", role: "Church Leader", gift: "2025 Toyota Fortuner GD6 (US$65k) plus US$20k cash" },
     { name: "Madzibaba Moses", role: "Religious Leader (Vapositori4ED)", gift: "2025 Toyota Fortuner 4x4 plus US$50k cash" },
@@ -109,22 +123,12 @@ exports.handler = async (event) => {
     { name: "Madzibaba Rabbi Musande", role: "Religious Leader", gift: "2026 Toyota Fortuner 2.4D" },
     { name: "Madzibaba Patrick", role: "Religious Leader", gift: "2026 Toyota Fortuner 2.4D" },
     { name: "Madzibaba Benjamin", role: "Religious Leader", gift: "2026 Toyota Fortuner 2.4D" },
+    { name: "Madzibaba Remincco Tafadzwa Zhangazha", role: "Religious Leader / Friend (Johanne Masowe Chishanu)", gift: "2026 Lamborghini Urus SE plus US$100,000 cash as a birthday gift" },
+    { name: "Madzibaba Ngoni", role: "Religious Leader (Johanne Masowe Chishanu - Evaton Branch, South Africa)", gift: "2026 Toyota Land Cruiser 300 Series ZX" },
     { name: "12 Other Church Leaders", role: "Religious Leaders", gift: "Each received a 2026 Toyota Fortuner (US$78,000)" },
     { name: "3 Senior Church Leaders", role: "Religious Leaders", gift: "Each: 2026 Lexus LX500D (US$250k) plus US$50k fuel" },
     { name: "Evangelist Trymore Muparinga", role: "Street Preacher", gift: "2025 Toyota Fortuner plus US$50k cash" },
-      // 10 South African Johanne Masowe Chishanu Members
-    { name: "Madzibaba Itai", role: "Religious Leader (Johanne Masowe Chishanu - City Deep, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzibaba Hermish", role: "Religious Leader (Johanne Masowe Chishanu - Kempton Park, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzibaba Ishmael", role: "Religious Leader (Johanne Masowe Chishanu - Venda, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzibaba Bynage", role: "Religious Leader (Johanne Masowe Chishanu - Free State, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzimai Loveness", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzibaba Aron", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzimai Memory", role: "Religious Leader (Johanne Masowe Chishanu - Germiston, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzibaba Thimothy", role: "Religious Leader (Johanne Masowe Chishanu - Eastern Cape, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzibaba Misheck", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },
-    { name: "Madzibaba Kennedy", role: "Religious Leader (Johanne Masowe Chishanu - Evaton, South Africa)", gift: "2026 Toyota Fortuner 2.4 GD6 plus 100,000 ZAR (approx. US$5,500) cash" },  
-    { name: "Madzibaba Remincco Tafadzwa Zhangazha", role: "Religious Leader / Friend (Johanne Masowe Chishanu)", gift: "2026 Lamborghini Urus SE plus US$100,000 cash as a birthday gift" },  
-    { name: "Madzibaba Ngoni", role: "Religious Leader (Johanne Masowe Chishanu - Evaton Branch, South Africa)", gift: "2026 Toyota Land Cruiser 300 Series ZX" },
+
     // ============================================================
     // TRADITIONAL & MEDIA
     // ============================================================
@@ -145,6 +149,11 @@ exports.handler = async (event) => {
     { name: "Zvenyika", role: "Boxer", gift: "Toyota Aqua plus US$20,000 cash" },
     { name: "Coach Rambo", role: "Coach / Biker Group Leader", gift: "Upgraded to Toyota Fortuner" },
     { name: "49 Bikers", role: "Biker Group Members", gift: "US$1,000 each" },
+    { name: "Peter Ndlovu", role: "Football Legend (former Warriors captain)", gift: "2024 BMW X6M Sport Competition (US$144,000)" },
+    { name: "Luke Mnkandla", role: "Highlanders FC Chairman", gift: "Toyota Fortuner 2.8 GD6 (US$80,500) as part of club leadership gifts" },
+    { name: "Denzel Mnkandla", role: "Highlanders FC CEO", gift: "Toyota Fortuner 2.4 GD6 (US$72,500) as part of club leadership gifts" },
+    { name: "Jabulani Nkomo", role: "Highlanders FC Curator", gift: "Toyota Land Cruiser 300 Series VXR plus US$50,000 cash" },
+    { name: "Madinda Ndlovu", role: "Highlanders FC Legend", gift: "Toyota Fortuner 2.4 GD6 (US$72,500) as part of club leadership gifts" },
 
     // ============================================================
     // POLITICS
@@ -154,11 +163,18 @@ exports.handler = async (event) => {
     { name: "Remigious Matangira", role: "MP (ZANU PF)", gift: "2026 Toyota Fortuner plus cash" },
     { name: "Temba Mliswa", role: "Former MP", gift: "Ford Raptor (US$107,000)" },
     { name: "C.H. Mukungunugwa", role: "Political Activist / Social Media Influencer", gift: "2020 Mercedes-Benz C220, US$20,000 cash, iPhone 16 Pro Max, Samsung Galaxy S24 Ultra, iPad Air, and later a Toyota Fortuner" },
+    { name: "Pupurai Togarepi", role: "ZANU PF Chief Whip", gift: "2026 Toyota Fortuner GD6 2.8 (US$82,000) plus US$100,000 cash" },
     { name: "10 ZANU PF Provincial Chairpersons", role: "Politicians", gift: "Each: 2025 Toyota Land Cruiser 300 VXR (US$190k)" },
     { name: "ZANU PF Women's League", role: "Political Organisation", gift: "6 Toyota Land Cruisers plus 10 Toyota Hilux GD6" },
 
     // ============================================================
-    // BUSINESS & OTHER INDIVIDUALS
+    // LEGAL PROFESSIONALS
+    // ============================================================
+    { name: "Sikhumbuzo Mpofu", role: "Chivayo's Lawyer", gift: "2026 Range Rover Sport Autobiography plus US$50,000 cash" },
+    { name: "Adv. Edley Mubaiwa", role: "Chivayo's Lawyer", gift: "2026 Range Rover Sport Autobiography plus US$50,000 cash" },
+
+    // ============================================================
+    // BUSINESS, ARTS & CULTURE
     // ============================================================
     { name: "Kuda Tagwirei", role: "Business Tycoon", gift: "2025 Rolls Royce Cullinan Black Badge (US$1.2M)" },
     { name: "Busisa Moyo", role: "CEO United Refineries", gift: "Luxury car (US$200,000)" },
@@ -170,36 +186,10 @@ exports.handler = async (event) => {
     { name: "Chibaya Headmaster's Wife", role: "Educator's Spouse", gift: "US$4,000 cash" },
     { name: "Mandy", role: "Therapist at Masawara Spa", gift: "Mercedes-Benz C200 plus US$10,000 cash for loyalty and service" },
     { name: "Cathy", role: "Bookings/Reception at Masawara Spa", gift: "Mercedes-Benz C200 plus US$10,000 cash for loyalty and service" },
-          // ============================================================
-    // NEWLY VERIFIED ADDITIONS (AUGUST 2026)
-    // ============================================================
-
-    // ---- SPORTS & FOOTBALL LEGENDS ----
-    { name: "Peter Ndlovu", role: "Football Legend (former Warriors captain)", gift: "2024 BMW X6M Sport Competition (US$144,000)" },
-    { name: "Luke Mnkandla", role: "Highlanders FC Chairman", gift: "Toyota Fortuner 2.8 GD6 (US$80,500) as part of club leadership gifts" },
-    { name: "Denzel Mnkandla", role: "Highlanders FC CEO", gift: "Toyota Fortuner 2.4 GD6 (US$72,500) as part of club leadership gifts" },
-    { name: "Jabulani Nkomo", role: "Highlanders FC Curator", gift: "Toyota Land Cruiser 300 Series VXR plus US$50,000 cash" },
-    { name: "Madinda Ndlovu", role: "Highlanders FC Legend", gift: "Toyota Fortuner 2.4 GD6 (US$72,500) as part of club leadership gifts" },
-
-    // ---- LEGAL PROFESSIONALS ----
-    { name: "Sikhumbuzo Mpofu", role: "Chivayo's Lawyer", gift: "2026 Range Rover Sport Autobiography plus US$50,000 cash" },
-    { name: "Adv. Edley Mubaiwa", role: "Chivayo's Lawyer", gift: "2026 Range Rover Sport Autobiography plus US$50,000 cash" },
-
-    // ---- POLITICS ----
-    { name: "Pupurai Togarepi", role: "ZANU PF Chief Whip", gift: "2026 Toyota Fortuner GD6 2.8 (US$82,000) plus US$100,000 cash" },
-
-    // ---- BUSINESS, ARTS & CULTURE ----
     { name: "Dr. Nicholas Ndebele", role: "ZITF CEO", gift: "2025 Toyota Land Cruiser 300 VXR (US$200,000)" },
     { name: "Aaron Chiundura Moyo", role: "Veteran Novelist / Filmmaker", gift: "2025 Toyota Fortuner 4x4 GD6 plus US$50,000 cash" },
-
-    // ---- MUSICIANS ----
-    { name: "Feli Nandi", role: "Musician / Restaurateur", gift: "2026 Toyota Fortuner 2.4 GD6 plus US$50,000 cash" },
-    { name: "Ex-Q", role: "Musician", gift: "2025 Mercedes-Benz GLE 450 (US$110,000) plus US$10,000 cash for fuel/maintenance" },
-          // ---- COMEDIANS ----
-    { name: "Comic Elder", role: "Comedian", gift: "US$150,000 cash for a house (for making the President laugh)" },
-
-    // ---- FAMILY MEMBERS (Jah Prayzah's Wife) ----
     { name: "Rufaro Chiworeso Mukombe", role: "Jah Prayzah's Wife", gift: "2024/2025 Land Rover Defender 2.4 D / 3.0 D (valued at over US$120,000) as a birthday gift" },
+
     // ============================================================
     // DECLINED GIFTS
     // ============================================================
