@@ -142,7 +142,7 @@
 
         async function loadDashboard() {
             try {
-                const response = await fetch('/get-beneficiaries?q=');
+                const response = await fetch('/get-beneficiaries?q=&t=' + Date.now());
                 const data = await response.json();
                 const results = data.results || [];
 
