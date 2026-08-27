@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard — Chivayo Beneficiaries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f0f5fa; color: #1e293b; min-height: 100vh;
+            display: flex; flex-direction: column;
+        }
+        .test-banner { background: #fef3c7; color: #92400e; text-align: center; padding: 0.5rem; font-size: 0.85rem; font-weight: 600; }
+        .navbar {
+            background: #ffffff; padding: 1rem 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #e9eef3;
+        }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #0b2b4a; letter-spacing: -0.3px; }
+        .logo span { color: #3b82f6; }
+        .nav-links { display: flex; gap: 0.5rem; }
+        .nav-links button {
+            background: transparent; border: none; padding: 0.5rem 1.2rem;
+            font-family: inherit; font-size: 0.95rem; font-weight: 500;
+            color: #475569; cursor: pointer; border-radius: 8px; transition: all 0.2s;
+        }
+        .nav-links button:hover { background: #f1f5f9; color: #0b2b4a; }
+        .nav-links button.active { background: #eff6ff; color: #3b82f6; font-weight: 600; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; flex: 1; width: 100%; }
+        h1 { font-size: 1.8rem; font-weight: 300; color: #0b2b4a; margin-bottom: 0.3rem; }
+        h1 strong { font-weight: 700; color: #3b82f6; }
+        .subhead { color: #64748b; font-size: 0.95rem; margin-bottom: 1.8rem; }
+
+        .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin-bottom: 2.5rem; }
+        .stat-card {
+            background: #ffffff; border-radius: 12px; padding: 1.4rem 1.6rem;
+            border-left: 4px solid #3b82f6; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .stat-card .num { font-size: 2rem; font-weight: 700; color: #0b2b4a; }
+        .stat-card .label { font-size: 0.85rem; color: #64748b; margin-top: 0.2rem; }
+
+        .chart-section { background: #ffffff; border-radius: 12px; padding: 1.6rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid #e9eef3; }
+        .chart-section h2 { font-size: 1.1rem; font-weight: 600; color: #0b2b4a; margin-bottom: 1rem; }
+        .chart-wrap { position: relative; height: 340px; }
+
+        .loading-wrapper { text-align: center; padding: 4rem 0; color: #64748b; }
+        .loader {
+            display: inline-block; width: 24px; height: 24px; border: 3px solid #e9eef3;
+            border-radius: 50%; border-top-color: #3b82f6; animation: spin 0.7s linear infinite; margin-bottom: 1rem;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .footer { text-align: center; padding: 1.2rem; border-top: 1px solid #e9eef3; color: #94a3b8; font-size: 0.85rem; background: #ffffff; margin-top: 2rem; }
+
+        @media (max-width: 700px) {
+            .navbar { flex-direction: column; gap: 0.6rem; padding: 0.8rem 1rem; }
+            h1 { font-size: 1.5rem; }
+            .chart-wrap { height: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-banner">This list is a work in progress — figures below reflect currently sourced entries only.</div>
+    <header class="navbar">
+        <div class="logo">Chivayo <span>Beneficiaries</span></div>
+        <div class="nav-links">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='dashboard.html'" class="active">Dashboard</button>
+            <button onclick="location.href='about.html'">About</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1><strong>Data</strong> Dashboard</h1>
+        <p class="subhead">Summary statistics computed live from the current beneficiary database</p>
+
+        <div id="loadingState" class="loading-wrapper">
+            <div class="loader"></div>
+            <div>Loading data...</div>
+        </div>
+
+        <div id="dashboardContent" style="display:none;">
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="num" id="statTotal">0</div>
+                    <div class="label">Total Beneficiaries</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num" id="statVehicles">0</div>
+                    <div class="label">Vehicles Given</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num" id="statValue">$0</div>
+                    <div class="label">Reported Value (USD)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="num" id="statSources">0</div>
+                    <div class="label">Media Sources</div>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <h2>Top 5 Roles by Total Reported Value</h2>
+                <div class="chart-wrap"><canvas id="rolesChart"></canvas></div>
+            </div>
+
+            <div class="chart-section">
+                <h2>Gifts Recorded Over Time (Monthly)</h2>
+                <div class="chart-wrap"><canvas id="timelineChart"></canvas></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">&copy; 2026 Public Record &bull; Data compiled from Zimbabwean media, click any entry for sources</footer>
+
+    <script>
+        function extractDomain(url) {
+            try {
+                const u = new URL(url);
+                return u.hostname.replace(/^www\./, '');
+            } catch (e) {
+                return null;
+            }
+        }
+
+        function categorizeRole(role) {
+            const r = (role || '').toLowerCase();
+            if (/musician|dj |rapper|reggae|zimdancehall|dj\//.test(r) || r.startsWith('dj')) return 'Musician';
+            if (/prophet|bishop|pastor|madzibaba|madzimai|religious|church|preacher|zaoga/.test(r)) return 'Religious Leader';
+            if (/comedian/.test(r)) return 'Comedian';
+            if (/mp \(|zanu|politic|chief whip/.test(r)) return 'Politician';
+            if (/fc |football|boxer|biker/.test(r)) return 'Sports';
+            if (/wife|family|sister|barber|designer/.test(r)) return 'Family / Personal';
+            if (/lawyer/.test(r)) return 'Legal';
+            if (/radio|journalist|media/.test(r)) return 'Media';
+            if (/school|healthcare|ceo|business|institution|group|organisation/.test(r)) return 'Business / Institution';
+            return 'Other';
+        }
+
+        async function loadDashboard() {
+            try {
+                const response = await fetch('/get-beneficiaries?q=');
+                const data = await response.json();
+                const results = data.results || [];
+
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('dashboardContent').style.display = 'block';
+
+                // ---- Total Beneficiaries ----
+                document.getElementById('statTotal').textContent = results.length;
+
+                // ---- Vehicles Given & Reported Value & Media Sources ----
+                let vehicleCount = 0;
+                let totalValue = 0;
+                const sourceSet = new Set();
+                const monthCounts = {};
+                const roleValues = {};
+
+                results.forEach(item => {
+                    const category = categorizeRole(item.role);
+                    if (!roleValues[category]) roleValues[category] = 0;
+
+                    (item.gifts || []).forEach(g => {
+                        const isCash = /cash/i.test(g.item);
+                        if (!isCash) vehicleCount++;
+
+                        if (typeof g.value === 'number') {
+                            totalValue += g.value;
+                            roleValues[category] += g.value;
+                        }
+
+                        if (g.date) {
+                            const month = g.date.slice(0, 7); // YYYY-MM
+                            if (/^\d{4}-\d{2}$/.test(month)) {
+                                monthCounts[month] = (monthCounts[month] || 0) + 1;
+                            }
+                        }
+                    });
+
+                    (item.evidence || []).forEach(url => {
+                        const d = extractDomain(url);
+                        if (d) sourceSet.add(d);
+                    });
+                });
+
+                document.getElementById('statVehicles').textContent = vehicleCount.toLocaleString();
+                document.getElementById('statValue').textContent = '$' + totalValue.toLocaleString();
+                document.getElementById('statSources').textContent = sourceSet.size;
+
+                // ---- Top 5 Roles Chart ----
+                const sortedRoles = Object.entries(roleValues)
+                    .sort((a, b) => b[1] - a[1])
+                    .slice(0, 5);
+
+                new Chart(document.getElementById('rolesChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: sortedRoles.map(r => r[0]),
+                        datasets: [{
+                            label: 'Total Reported Value (USD)',
+                            data: sortedRoles.map(r => r[1]),
+                            backgroundColor: '#3b82f6',
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { callback: v => '$' + v.toLocaleString() }
+                            }
+                        }
+                    }
+                });
+
+                // ---- Timeline Chart ----
+                const sortedMonths = Object.keys(monthCounts).sort();
+                new Chart(document.getElementById('timelineChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: sortedMonths,
+                        datasets: [{
+                            label: 'Gifts Recorded',
+                            data: sortedMonths.map(m => monthCounts[m]),
+                            backgroundColor: '#059669',
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
+                    }
+                });
+
+            } catch (error) {
+                document.getElementById('loadingState').innerHTML = `<div>Error loading data: ${error.message}</div>`;
+            }
+        }
+
+        loadDashboard();
+    </script>
+</body>
+</html>

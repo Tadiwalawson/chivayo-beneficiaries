@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Chivayo Beneficiaries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f0f5fa; color: #1e293b; min-height: 100vh;
+            display: flex; flex-direction: column;
+        }
+        .test-banner { background: #fef3c7; color: #92400e; text-align: center; padding: 0.5rem; font-size: 0.85rem; font-weight: 600; }
+        .navbar {
+            background: #ffffff; padding: 1rem 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #e9eef3;
+        }
+        .logo { font-size: 1.4rem; font-weight: 700; color: #0b2b4a; letter-spacing: -0.3px; }
+        .logo span { color: #3b82f6; }
+        .nav-links { display: flex; gap: 0.5rem; }
+        .nav-links button {
+            background: transparent; border: none; padding: 0.5rem 1.2rem;
+            font-family: inherit; font-size: 0.95rem; font-weight: 500;
+            color: #475569; cursor: pointer; border-radius: 8px; transition: all 0.2s;
+        }
+        .nav-links button:hover { background: #f1f5f9; color: #0b2b4a; }
+        .nav-links button.active { background: #eff6ff; color: #3b82f6; font-weight: 600; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; flex: 1; width: 100%; }
+
+        .about-box { max-width: 740px; margin: 1.5rem auto; background: #ffffff; padding: 3rem 2.5rem; border-radius: 16px; border: 1px solid #e9eef3; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .about-box h2 { font-size: 2.2rem; font-weight: 300; color: #0b2b4a; margin-bottom: 1rem; text-align: center; }
+        .about-box h2 strong { color: #3b82f6; font-weight: 700; }
+        .about-box .divider { width: 60px; height: 3px; background: #3b82f6; margin: 0 auto 1.8rem; border-radius: 4px; }
+        .about-box p { color: #475569; font-size: 1rem; line-height: 1.75; margin-bottom: 1.4rem; }
+        .about-box h3 { font-size: 1.15rem; font-weight: 700; color: #0b2b4a; margin: 1.6rem 0 0.5rem; }
+        .about-box .footnote { margin-top: 2rem; font-size: 0.8rem; color: #cbd5e1; padding-top: 1.4rem; border-top: 1px solid #e9eef3; }
+
+        .footer { text-align: center; padding: 1.2rem; border-top: 1px solid #e9eef3; color: #94a3b8; font-size: 0.85rem; background: #ffffff; margin-top: 2rem; }
+
+        @media (max-width: 700px) {
+            .navbar { flex-direction: column; gap: 0.6rem; padding: 0.8rem 1rem; }
+            .about-box { padding: 2rem 1.4rem; }
+            .about-box h2 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-banner">This list is a work in progress — more entries are added as citations are verified.</div>
+    <header class="navbar">
+        <div class="logo">Chivayo <span>Beneficiaries</span></div>
+        <div class="nav-links">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='dashboard.html'">Dashboard</button>
+            <button onclick="location.href='about.html'" class="active">About</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="about-box">
+            <h2>Project <strong>Overview</strong></h2>
+            <div class="divider"></div>
+
+            <p>The Database is a non commercial data project dedicated to cataloging the documented resource distributions made by Mr Wicknell Chivayo. Beginning in 2023, Mr. Chivayo has been documented as distributing significant resources including vehicles, direct financial grants, and institutional support across various sectors of Zimbabwean society. This archive aggregates data from verified media reports to provide a centralized overview of these transactions.</p>
+
+            <h3>Mission</h3>
+            <p>To maintain a factual, non partisan record of public benefaction for the purposes of historical documentation, media reference, and public knowledge.</p>
+
+            <h3>Methodology</h3>
+            <p>All information is sourced from public news outlets. We note that values are estimated based on market rates at the time of reporting, and that some gifts may have been subsequently declined or altered.</p>
+
+            <p class="footnote">All information is based on publicly available media reports. Please verify independently.</p>
+        </div>
+    </main>
+
+    <footer class="footer">&copy; 2026 Public Record &bull; Data compiled from Zimbabwean media</footer>
+</body>
+</html>
