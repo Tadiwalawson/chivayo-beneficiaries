@@ -48,8 +48,8 @@ export default {
           gifts: [
             { item: "US$250,000 cash", value: 250000, currency: "USD", date: "2025-03-20", source: "https://iharare.com/wicknell-chivayo-gifts-bestie-tazvi-chief-j-mhaka-2-weekend-cars-and-us250k-for-his-birthday/" },
             { item: "Toyota Landcruiser VXR 300", value: 200000, currency: "USD", date: "2025-03-20", source: "https://iharare.com/wicknell-chivayo-gifts-bestie-tazvi-chief-j-mhaka-2-weekend-cars-and-us250k-for-his-birthday/" },
-            { item: "2023 Bentley Beytaga V8 Sport", value: 500000, currency: "USD", date: "2025-03-20", source: "https://gambakwe.com/2024/10/09/chivayo-spoils-his-bestfriend-tazvi-mhaka-with-a-brand-new-2023-bentley-beytaga-v8-sport/" }
-            { item: "US$1m cash", value: 1000000, currency: "USD", date: "2025-03-20", source: "https://www.heraldonline.co.zw/will-it-be-a-us1m-present-for-jah-prayzah-from-sir-wicknell-as-the-music-superstar-celebrates-his-39th-birthday-tomorrow/" },
+            { item: "2023 Bentley Beytaga V8 Sport", value: 500000, currency: "USD", date: "2025-03-20", source: "https://gambakwe.com/2024/10/09/chivayo-spoils-his-bestfriend-tazvi-mhaka-with-a-brand-new-2023-bentley-beytaga-v8-sport/" },
+            { item: "US$1m cash", value: 1000000, currency: "USD", date: "2025-03-20", source: "https://www.heraldonline.co.zw/will-it-be-a-us1m-present-for-jah-prayzah-from-sir-wicknell-as-the-music-superstar-celebrates-his-39th-birthday-tomorrow/" }
           ],
           evidence: ["https://iharare.com/wicknell-chivayo-gifts-bestie-tazvi-chief-j-mhaka-2-weekend-cars-and-us250k-for-his-birthday/", "https://gambakwe.com/2024/10/09/chivayo-spoils-his-bestfriend-tazvi-mhaka-with-a-brand-new-2023-bentley-beytaga-v8-sport/"],
           status: "confirmed"
@@ -97,9 +97,9 @@ export default {
           role: "Musician",
           gifts: [
             { item: "2022 Mercedes Benz GLE 400d", value: 140000, currency: "USD", date: "2024-03-10", source: "https://www.heraldonline.co.zw/editorialmacheso-deserves-his-special-gift/" },
-            { item: "2026 Toyota Fortuner GD 6 Approx 70k", value: 70000, currency: "USD", date: "2026-06-20", source: "https://www.heraldonline.co.zw/macheso-grateful-after-receiving-second-vehicle-from-wicknell-chivayo/" }
+            { item: "2026 Toyota Fortuner GD 6 Approx 70k", value: 70000, currency: "USD", date: "2026-06-20", source: "https://www.heraldonline.co.zw/macheso-grateful-after-receiving-second-vehicle-from-wicknell-chivayo/" },
             { item: "9 Toyota Aquas for Band and Manager (Aprox 9k Each)", value: 81000, currency: "USD", date: "2024-02-10", source: "https://news.pindula.co.zw/2026/07/01/chivayo-gifts-macheso-new-fortuner-and-us10000-after-crash/" },
-            { item: "US$ 28 000 cash 10k for him and 18k for band members", value: 28000, currency: "USD", date: "2024-07-15", source: "https://news.pindula.co.zw/2026/07/01/chivayo-gifts-macheso-new-fortuner-and-us10000-after-crash/" },
+            { item: "US$ 28 000 cash 10k for him and 18k for band members", value: 28000, currency: "USD", date: "2024-07-15", source: "https://news.pindula.co.zw/2026/07/01/chivayo-gifts-macheso-new-fortuner-and-us10000-after-crash/" }
           ],
           evidence: ["https://www.heraldonline.co.zw/editorialmacheso-deserves-his-special-gift/", "https://www.heraldonline.co.zw/macheso-grateful-after-receiving-second-vehicle-from-wicknell-chivayo/"],
           status: "confirmed"
@@ -210,7 +210,7 @@ export default {
           role: "Gospel Musician",
           gifts: [
             { item: "2025 Toyota Fortuner", value: 85000, currency: "USD", date: "2025-01-18", source: "https://www.heraldonline.co.zw/ranganai-henyu-asi-zvichakona-dorcas-moyo-receives-new-car-20-000-from-chivayo-after-being-bullied/" },
-            { item: "Cash", value: 20000, currency: "USD", date: "2024-07-15", source: "https://www.heraldonline.co.zw/ranganai-henyu-asi-zvichakona-dorcas-moyo-receives-new-car-20-000-from-chivayo-after-being-bullied/"" },
+            { item: "Cash", value: 20000, currency: "USD", date: "2024-07-15", source: "https://www.heraldonline.co.zw/ranganai-henyu-asi-zvichakona-dorcas-moyo-receives-new-car-20-000-from-chivayo-after-being-bullied/" }
           ],
           evidence: ["https://www.heraldonline.co.zw/ranganai-henyu-asi-zvichakona-dorcas-moyo-receives-new-car-20-000-from-chivayo-after-being-bullied/"],
           status: "confirmed"
@@ -504,7 +504,7 @@ export default {
         },
 
         // ============================================================
-        // RELIGIOUS LEADERS (IDs 046-078, partial - through Madzimai Loveness)
+        // RELIGIOUS LEADERS (IDs 046-095)
         // ============================================================
         {
           id: "CHV-2026-046",
@@ -554,9 +554,8 @@ export default {
           gifts: [
             { item: "US$3,000,000 cash from 2024 to 2026", value: 3000000, currency: "USD", date: "2025-11-10", source: "https://iharare.com/wicknell-chivayo-gifts-bishop-nehemiah-mutendi-us450k-mercedes-benz-maybach-donates-us2-million-to-zcc-church/" },
             { item: "2025 Mercedes Maybach S680", value: 450000, currency: "USD", date: "2025-11-10", source: "https://news.pindula.co.zw/2026/03/12/chivayo-splashes-us2-million-cash-luxury-maybach-on-bishop-mutendi/" },
-            { item: "Range Rover Autobiography SV", value: 400000, currency: "USD", date: "2025-11-10", source: "https://nehandaradio.com/2025/05/21/lightning-strikes-twice-wicknell-replaces-damaged-gift-to-bishop-mutendi-with-another-luxury-vehicle/"},
-            { item: "Range Rover Autobiography SV FOR Amai Mutendi", value: 190000, currency: "USD", date: "2025-11-10", source: "https://nehandaradio.com/2025/05/21/lightning-strikes-twice-wicknell-replaces-damaged-gift-to-bishop-mutendi-with-another-luxury-vehicle/"},
-            
+            { item: "Range Rover Autobiography SV", value: 400000, currency: "USD", date: "2025-11-10", source: "https://nehandaradio.com/2025/05/21/lightning-strikes-twice-wicknell-replaces-damaged-gift-to-bishop-mutendi-with-another-luxury-vehicle/" },
+            { item: "Range Rover Autobiography SV FOR Amai Mutendi", value: 190000, currency: "USD", date: "2025-11-10", source: "https://nehandaradio.com/2025/05/21/lightning-strikes-twice-wicknell-replaces-damaged-gift-to-bishop-mutendi-with-another-luxury-vehicle/" }
           ],
           evidence: ["https://news.pindula.co.zw/2026/03/12/chivayo-splashes-us2-million-cash-luxury-maybach-on-bishop-mutendi/", "https://nehandaradio.com/2025/05/21/lightning-strikes-twice-wicknell-replaces-damaged-gift-to-bishop-mutendi-with-another-luxury-vehicle/"],
           status: "confirmed"
@@ -1047,14 +1046,22 @@ export default {
           evidence: ["https://x.com/wicknellchivayo/status/2063853579782193582?s=20"],
           status: "confirmed"
         },
+
+        // ============================================================
+        // OTHER RECIPIENTS (IDs 096-134)
+        // ============================================================
         {
           id: "CHV-2026-096",
-          name: "Chief Hwenje",
-          role: "Traditional Chief",
+          name: "Chief Hwenje (Shumba Hwenje)",
+          role: "Musician / Praise Singer",
           gifts: [
-            { item: "Toyota Hilux", value: 100000, currency: "USD", date: "2025-11-05", source: "https://www.pindula.co.zw/List_of_Zimbabweans_That_Received_Cars_and_Gifts_From_Wicknell_Chivayo" }
+            { item: "Toyota Hilux", value: 100000, currency: "USD", date: "2025-11-05", source: "https://www.pindula.co.zw/List_of_Zimbabweans_That_Received_Cars_and_Gifts_From_Wicknell_Chivayo" },
+            { item: "Car (reported as received – disputed delivery)", value: null, currency: "USD", date: "2023", source: "https://www.newsday.co.zw/theindependent/standard-style/article/200017065/sir-wicknell-gifts-zanu-pf-artists" }
           ],
-          evidence: ["https://www.pindula.co.zw/List_of_Zimbabweans_That_Received_Cars_and_Gifts_From_Wicknell_Chivayo"],
+          evidence: [
+            "https://www.pindula.co.zw/List_of_Zimbabweans_That_Received_Cars_and_Gifts_From_Wicknell_Chivayo",
+            "https://www.newsday.co.zw/theindependent/standard-style/article/200017065/sir-wicknell-gifts-zanu-pf-artists"
+          ],
           status: "confirmed"
         },
         {
@@ -1351,83 +1358,74 @@ export default {
           status: "confirmed"
         },
         {
-            id: "CHV-2026-129",
-            name: "Talent Madungwe",
-            role: "Self-styled Prophet",
-            gifts: [
-              { item: "Toyota Aqua", value: 9000, currency: "USD", date: "2024", source: "https://www.heraldonline.co.zw/prophet-madungwe-arrested-after-driving-donated-car-without-a-drivers-licence/"}
-    ],
-    evidence: [
-      "https://www.heraldonline.co.zw/prophet-madungwe-arrested-after-driving-donated-car-without-a-drivers-licence/",
-      "https://allafrica.com/stories/202410090047.html"
-    ],
-    status: "confirmed"
-  },
-   {
-     id: "CHV-2026-130",
-      name: "John Landa Nkomo Trust",
-      role: "Educational Trust",
-      gifts: [
-      { item: "US$250,000 cash donation",  value: 250000,  currency: "USD",date: "2024-10-09",source: "https://thenewshawks.com/chivayo-donates-usd250-000-to-john-landa-nkomo-trust/"},
-      { item: "US$250,000 cash donation",  value: 250000,  currency: "USD",date: "2026-08-22",source: "https://x.com/wicknellchivayo/status/2091095037673078883?s=20"},
-      { item: "Headmaster's single cab",  value: null,  currency: "USD",date: "2026-08-22",source: "https://x.com/wicknellchivayo/status/2091095037673078883?s=20"},
-      { item: "ICT equipment: 100 desktops, 50 Laptops and 50 printers",  value: null,  currency: "USD",date: "2026-08-22",source: "https://x.com/wicknellchivayo/status/2091095037673078883?s=20"}
-    ],
-    evidence: ["https://thenewshawks.com/chivayo-donates-usd250-000-to-john-landa-nkomo-trust/","https://x.com/wicknellchivayo/status/2091095037673078883?s=20"],
-    status: "confirmed"
-  },
-   {
-    id: "CHV-2026-131",
-    name: "Kuda Tagwirei",
-    role: "Business Tycoon",
-    gifts: [
-      { item: "2025 Rolls-Royce Cullinan Black Badge", value: 1200000, currency: "USD", date: "2025-02-12", source: "https://thezimbabwetimes.co.zw/wicknell-chivayo-gifts-kuda-tagwirei-rolls-royce/" },
-      { item: "US$250,000 cash (wedding gift)", value: 250000, currency: "USD", date: "2026-05-25", source: "https://iharare.com/kuda-tagwireis-son-and-his-bride-showered-with-over-us-20-million-in-cash-land-and-luxury-wedding-gifts/" }
-    ],
-    evidence: [
-      "https://thezimbabwetimes.co.zw/wicknell-chivayo-gifts-kuda-tagwirei-rolls-royce/",
-      "https://news.pindula.co.zw/2025/02/12/chivayo-gifts-kuda-tagwirei-a-2025-rolls-royce-cullinan-for-his-birthday/"
-    ],
-    status: "confirmed"
-  },
-  {
-    id: "CHV-2026-132",
-    name: "Chief Hwenje (Shumba Hwenje)",
-    role: "Musician / Praise Singer",
-    gifts: [
-      { item: "Car (reported as received)", value: null, currency: "USD", date: "2023", source: "https://www.newsday.co.zw/theindependent/standard-style/article/200017065/sir-wicknell-gifts-zanu-pf-artists" }
-    ],
-    evidence: [
-      "https://www.newsday.co.zw/theindependent/standard-style/article/200017065/sir-wicknell-gifts-zanu-pf-artists"
-    ],
-    status: "disputed"
-  },
-  {
-    id: "CHV-2026-133",
-    name: "Baba Tencen",
-    role: "Comedian",
-    gifts: [
-      { item: "R100,000 cash", value: 5500, currency: "ZAR", date: "2016-03-17", source: "https://www.heraldonline.co.zw/wicknell-deposits-baba-tencens-r100000/" }
-    ],
-    evidence: [
-      "https://www.heraldonline.co.zw/wicknell-deposits-baba-tencens-r100000/",
-      "https://nehandaradio.com/2016/03/17/wicknell-gives-baba-tencen-r100-000-us/"
-    ],
-    status: "confirmed"
-  },
-  {
-    id: "CHV-2026-134",
-    name: "Jah Bobo (Tinotenda Mutswiri)",
-    role: "Robert Mugabe Impersonator",
-    gifts: [
-      { item: "Toyota Aqua", value: 9000, currency: "USD", date: "2024-02-28", source: "https://gambakwe.com/2024/02/28/wicknell-chivayo-gifts-jah-bobo-a-brand-new-toyota-aqua/" }
-    ],
-    evidence: [
-      "https://gambakwe.com/2024/02/28/wicknell-chivayo-gifts-jah-bobo-a-brand-new-toyota-aqua/",
-      "https://iharare.com/he-deserves-a-benz-zimbos-erupt-with-reactions-as-wicknell-chivayo-offers-to-buy-robert-mugabes-impersonator-jah-bobo-a-toyota-aqua/"
-    ],
-    status: "confirmed"
-  }
+          id: "CHV-2026-129",
+          name: "Talent Madungwe",
+          role: "Self-styled Prophet",
+          gifts: [
+            { item: "Toyota Aqua", value: 9000, currency: "USD", date: "2024", source: "https://www.heraldonline.co.zw/prophet-madungwe-arrested-after-driving-donated-car-without-a-drivers-licence/" }
+          ],
+          evidence: [
+            "https://www.heraldonline.co.zw/prophet-madungwe-arrested-after-driving-donated-car-without-a-drivers-licence/",
+            "https://allafrica.com/stories/202410090047.html"
+          ],
+          status: "confirmed"
+        },
+        {
+          id: "CHV-2026-130",
+          name: "John Landa Nkomo Trust",
+          role: "Educational Trust",
+          gifts: [
+            { item: "US$250,000 cash donation", value: 250000, currency: "USD", date: "2024-10-09", source: "https://thenewshawks.com/chivayo-donates-usd250-000-to-john-landa-nkomo-trust/" },
+            { item: "US$250,000 cash donation", value: 250000, currency: "USD", date: "2026-08-22", source: "https://x.com/wicknellchivayo/status/2091095037673078883?s=20" },
+            { item: "Headmaster's single cab", value: null, currency: "USD", date: "2026-08-22", source: "https://x.com/wicknellchivayo/status/2091095037673078883?s=20" },
+            { item: "ICT equipment: 100 desktops, 50 Laptops and 50 printers", value: null, currency: "USD", date: "2026-08-22", source: "https://x.com/wicknellchivayo/status/2091095037673078883?s=20" }
+          ],
+          evidence: [
+            "https://thenewshawks.com/chivayo-donates-usd250-000-to-john-landa-nkomo-trust/",
+            "https://x.com/wicknellchivayo/status/2091095037673078883?s=20"
+          ],
+          status: "confirmed"
+        },
+        {
+          id: "CHV-2026-131",
+          name: "Kuda Tagwirei",
+          role: "Business Tycoon",
+          gifts: [
+            { item: "2025 Rolls-Royce Cullinan Black Badge", value: 1200000, currency: "USD", date: "2025-02-12", source: "https://thezimbabwetimes.co.zw/wicknell-chivayo-gifts-kuda-tagwirei-rolls-royce/" },
+            { item: "US$250,000 cash (wedding gift)", value: 250000, currency: "USD", date: "2026-05-25", source: "https://iharare.com/kuda-tagwireis-son-and-his-bride-showered-with-over-us-20-million-in-cash-land-and-luxury-wedding-gifts/" }
+          ],
+          evidence: [
+            "https://thezimbabwetimes.co.zw/wicknell-chivayo-gifts-kuda-tagwirei-rolls-royce/",
+            "https://news.pindula.co.zw/2025/02/12/chivayo-gifts-kuda-tagwirei-a-2025-rolls-royce-cullinan-for-his-birthday/"
+          ],
+          status: "confirmed"
+        },
+        {
+          id: "CHV-2026-133",
+          name: "Baba Tencen",
+          role: "Comedian",
+          gifts: [
+            { item: "R100,000 cash", value: 5500, currency: "ZAR", date: "2016-03-17", source: "https://www.heraldonline.co.zw/wicknell-deposits-baba-tencens-r100000/" }
+          ],
+          evidence: [
+            "https://www.heraldonline.co.zw/wicknell-deposits-baba-tencens-r100000/",
+            "https://nehandaradio.com/2016/03/17/wicknell-gives-baba-tencen-r100-000-us/"
+          ],
+          status: "confirmed"
+        },
+        {
+          id: "CHV-2026-134",
+          name: "Jah Bobo (Tinotenda Mutswiri)",
+          role: "Robert Mugabe Impersonator",
+          gifts: [
+            { item: "Toyota Aqua", value: 9000, currency: "USD", date: "2024-02-28", source: "https://gambakwe.com/2024/02/28/wicknell-chivayo-gifts-jah-bobo-a-brand-new-toyota-aqua/" }
+          ],
+          evidence: [
+            "https://gambakwe.com/2024/02/28/wicknell-chivayo-gifts-jah-bobo-a-brand-new-toyota-aqua/",
+            "https://iharare.com/he-deserves-a-benz-zimbos-erupt-with-reactions-as-wicknell-chivayo-offers-to-buy-robert-mugabes-impersonator-jah-bobo-a-toyota-aqua/"
+          ],
+          status: "confirmed"
+        }
       ];
 
       let filtered = beneficiaries;
